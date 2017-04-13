@@ -5,3 +5,19 @@ way that if an element has no duplicates it is simply copied into the result
 list. Only elements with duplicates are transferred as (N E) lists.
 
 --}
+
+module Exercise11
+( encodeModified
+, ListItem (Single, Multiple)
+) where
+
+import Data.List(group)
+
+data ListItem a = Single a | Multiple Int a
+    deriving (Show)
+
+encodeModified :: (Eq a) => [a] -> [ListItem a]
+encodeModified xs = map (\x -> if length x == 1
+                               then Single (head x)
+                               else Multiple (length x) (head x)
+                        ) $ group xs

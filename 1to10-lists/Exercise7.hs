@@ -7,7 +7,7 @@ as elements into a `flat' list by replacing each list with its elements
 --}
 
 module Exercise7
-( NestedList
+( NestedList (Elem, List)
 , flatten
 ) where
 

@@ -44,14 +44,13 @@ main = hspec $ do
     it "isPalindrome [1,2,4,8,16,8,4,2,1] should return True" $ do
       isPalindrome [1,2,4,8,16,8,4,2,1] `shouldBe` (True :: Bool)
 
-  -- TEST FAILING
-  -- describe "Exercise 7" $ do
-  --   it "flatten (Elem 5) should return [5]" $ do
-  --     flatten (Elem 5) `shouldBe` ([5] :: [Int])
-  --   it "flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]]) should return [1,2,3,4,5]" $ do
-  --     flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]]) `shouldBe` ([1,2,3,4,5] :: [Int])
-  --   it "flatten (List []) should return []" $ do
-  --     flatten (List []) `shouldBe` ([] :: [])
+  describe "Exercise 7" $ do
+    it "flatten (Elem 5) should return [5]" $ do
+      flatten (Elem 5) `shouldBe` ([5] :: [Int])
+    it "flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]]) should return [1,2,3,4,5]" $ do
+      flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]]) `shouldBe` ([1,2,3,4,5] :: [Int])
+    it "flatten (List []) should return []" $ do
+      flatten (List []) `shouldBe` ([] :: String)
 
   describe "Exercise 8" $ do
     it "compress \"aaaabccaadeeee\" should return \"abcade\"" $ do
