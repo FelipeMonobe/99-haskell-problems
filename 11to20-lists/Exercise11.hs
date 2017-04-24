@@ -14,7 +14,7 @@ module Exercise11
 import Data.List(group)
 
 data ListItem a = Single a | Multiple Int a
-    deriving (Show)
+    deriving (Show, Eq)
 
 encodeModified :: (Eq a) => [a] -> [ListItem a]
 encodeModified xs = map (\x -> if length x == 1
