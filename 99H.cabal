@@ -1,0 +1,64 @@
+name:                99H
+version:             0.1.0.0
+description:         My solutions to 99 Haskell Problems
+homepage:            https://github.com/felipemonobe/99H#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Felipe Monobe
+maintainer:          xinube@gmail.com
+copyright:           2017 Felipe Monobe
+category:            Education
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Exercises.Lists1.Index
+                     , Exercises.Lists2.Index
+                     , Exercises.Lists3.Index
+  other-modules:       Exercises.Lists1.Exercise1
+                     , Exercises.Lists1.Exercise2
+                     , Exercises.Lists1.Exercise3
+                     , Exercises.Lists1.Exercise4
+                     , Exercises.Lists1.Exercise5
+                     , Exercises.Lists1.Exercise6
+                     , Exercises.Lists1.Exercise7
+                     , Exercises.Lists1.Exercise8
+                     , Exercises.Lists1.Exercise9
+                     , Exercises.Lists1.Exercise10
+                     , Exercises.Lists2.Exercise11
+                     , Exercises.Lists2.Exercise12
+                     , Exercises.Lists2.Exercise13
+                     , Exercises.Lists2.Exercise14
+                     , Exercises.Lists2.Exercise15
+                     , Exercises.Lists2.Exercise16
+                     , Exercises.Lists2.Exercise17
+                     , Exercises.Lists2.Exercise18
+                     , Exercises.Lists2.Exercise19
+                     , Exercises.Lists2.Exercise20
+                     , Exercises.Lists3.Exercise21
+                     , Exercises.Lists3.Exercise22
+                     , Exercises.Lists3.Exercise23
+                     , Exercises.Lists3.Exercise24
+                     , Exercises.Lists3.Exercise25
+                     , Exercises.Lists3.Exercise26
+                     , Exercises.Lists3.Exercise27
+                     , Exercises.Lists3.Exercise28
+  build-depends:       base >= 4.7 && < 5
+  default-language:    Haskell2010
+
+test-suite 99H-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , 99H
+                     , hspec
+                     , QuickCheck
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/felipemonobe/99H
