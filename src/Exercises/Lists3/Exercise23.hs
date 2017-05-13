@@ -8,4 +8,11 @@ module Exercises.Lists3.Exercise23
 ( rndSelect
 ) where
 
-rndSelect = "placeholder"
+import System.Random(getStdGen,randomRs)
+
+rndSelect :: [a] -> Int -> IO[a]
+rndSelect xs n = do
+          gen <- getStdGen
+          let rNums = randomRs (1, length xs - 1) gen
+          let idxs  = take n rNums 
+          return $ map (\x -> xs !! x) idxs

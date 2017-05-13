@@ -13,4 +13,4 @@ removeAt 1 (x:xs) = (x, xs)
 removeAt n xs
   | n >= length xs = (head xs, [])
   | otherwise      = (i, filter (/= i) xs)
-    where i = xs !! (n - 1)
+    where i        = xs !! (n - 1)

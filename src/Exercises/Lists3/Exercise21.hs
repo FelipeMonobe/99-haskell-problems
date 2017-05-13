@@ -8,4 +8,7 @@ module Exercises.Lists3.Exercise21
 ( insertAt
 ) where
 
-insertAt = "placeholder"
+insertAt :: a -> [a] -> Int -> [a]
+insertAt x ys n = start ++ [x] ++ end
+  where start   = take (n-1) ys
+        end     = drop (n-1) ys

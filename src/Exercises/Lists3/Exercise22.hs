@@ -8,4 +8,5 @@ module Exercises.Lists3.Exercise22
 ( range
 ) where
 
-range = "placeholder"
+range :: Int -> Int -> [Int]
+range x y = [x..y]
